@@ -1,0 +1,84 @@
+/*Button*/
+@mixin button{
+    & button {
+        font-size: 18px; 
+        padding: 13px 25px 13px 25px;
+        border-radius: 100px;
+        color: #fff;
+        font-weight: bold;
+        background-image: $gradiant; 
+        border: none; 
+        box-shadow: $shadow-25; 
+        transition-duration: 0.25s; 
+
+        &:hover {
+
+            opacity: 0.9;
+            cursor: pointer;
+            box-shadow: $shadow-75; 
+        }
+    }
+}
+
+/*Animation Heart*/
+@mixin heart-like {
+
+    & i{
+
+        font-size: 35px; 
+        position: absolute; 
+        right: 16px;
+        top: 0px; 
+        }
+    
+        & .fa-solid {
+    
+            opacity: 0;
+    
+            &:hover{
+    
+                opacity: 1;    
+                color:transparent;
+                background: $gradiant; 
+                background-clip: text;
+                -webkit-background-clip: text;
+                transition: 200ms;
+                transform: scale(1.03);
+                cursor: pointer;
+            }
+        }
+    
+}
+
+/*Header Logo*/
+@mixin logo {
+
+    position: relative; 
+    box-shadow: 0px 0px 8px rgb(0 0 0 / 25%); 
+
+        & h1 {
+
+        
+            font-family : $font-1; 
+            margin: 0px;
+            padding: 10px 0 10px 0; 
+            text-align: center;
+            
+        }
+
+}
+
+/*Brekpoint*/
+
+@mixin break-tablet {
+    @media (max-width: $tablet){
+        @content
+    }
+};
+
+@mixin break-mobile {
+    @media (max-width: $mobile){
+        @content
+    }
+}
+

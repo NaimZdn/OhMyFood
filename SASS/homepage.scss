@@ -1,0 +1,262 @@
+@import "./mixins.scss";
+
+/*Loader*/
+.loader {
+    width: 100%;
+    background-color: #ffff;
+    position: fixed;
+    inset: 0; 
+    z-index: 1;
+    opacity: 0.8;
+}
+.loader-2{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.90);
+    position: fixed;
+    inset: 0; 
+    z-index: 1;
+    animation: loader 3s both ;
+}
+.wrapper{
+    width:200px;
+    height:60px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle{
+    width:20px;
+    height:20px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: $purple-primary;
+    left:15%;
+    transform-origin: 50%;
+    animation: circle .5s alternate infinite ease;
+
+        &:nth-child(2){
+            left:35%;
+            background-color: $pink-secondary ;
+            animation-delay: .2s;
+        }
+        &:nth-child(3){
+            left:auto;
+            background-color: $green-tertiary;
+            right:35%;
+            animation-delay: .3s;
+        }
+}
+/*Lieu*/
+
+.lieu {
+    display: flex;
+    font-family: $font-2;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px 0; 
+    margin: 0px;
+    background-color: #f2f2f2;
+
+        & h2 {
+
+        font-size: 19px ;
+    }
+
+        & i{
+
+        font-size: 20px;
+        padding-right: 20px;
+
+        }
+}
+
+/*Nav Bar */
+
+.explorer {
+
+    font-family: $font-2;
+    text-align: center;
+    background-color: #fafafa;
+    padding: 20px;
+
+        & h3 {
+
+        font-size: 25px;
+    }
+        & p {
+
+        font-weight: 200;
+    }
+
+        @include button;
+}
+
+/*Fonctionnement*/
+
+.fonction h3{
+
+    padding-left: 100px; 
+    font-size: 25px; 
+    margin-bottom: 25px; 
+    
+        @include break-mobile{
+
+            padding: 0px 30px 0px 30px ;
+
+        }
+}
+
+.step  {
+
+    display: flex; 
+    gap: 40px; 
+    padding: 0px 100px 0px 100px; 
+    counter-reset: tuto;    
+
+        & li {
+
+        background-color: #f6f6f6;
+        padding: 25px 25px 25px 0px ; 
+        flex-grow: 1;
+        border-radius: 20px; 
+        box-shadow: 3px 3px 8px rgb(0 0 0 / 15%); 
+        list-style: none;  
+
+            &:before {
+
+                content: "" counter(tuto); 
+                counter-increment: tuto;
+                background-color: $purple-primary ;
+                color: white; 
+                padding: 4px 9px 4px 9px; 
+                border-radius: 100%; 
+                position: relative; 
+                left: -14px; 
+            }
+
+            &:hover{
+
+                background-color: #f5edff;
+
+                & .fa-solid{
+
+                    color: $purple-primary; 
+                }
+            }   
+        }
+
+        & i {
+
+            color: #7e7e7e;
+            padding-right: 10px 
+
+        }
+        @include break-tablet{
+             
+             flex-direction: column;
+        }
+        @include break-mobile{
+            
+            padding: 0px 30px 0px 30px 
+        }
+}
+
+.step_texte {
+
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+/*Listes des Restaurants*/
+/*Restaurants*/
+
+.restaurants {
+
+    background-color: #f6f6f6;
+    padding: 0px 100px 50px 100px; 
+
+    & h3{
+
+    font-size: 25px;
+    padding-top: 25px; 
+    }
+
+    @include break-mobile{
+
+        padding: 0px 30px 50px 30px  ;
+
+    }
+}
+
+.full-cartes {
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2em;
+
+    & a {
+
+    color: inherit; 
+    text-decoration: none;
+    }
+    @include break-tablet{
+             
+        grid-template-columns: repeat(1, 4fr);
+   }
+}
+
+
+.carte {
+    row-gap: 2em;
+    gap: 2em;
+    background-color: white;
+    border-radius: 1em;   
+
+    & img {
+
+    height: 12em;
+    width: 100%;
+    border: 0px solid transparent; 
+    border-radius: 1em 1em 0 0 ;
+    object-fit: cover;
+    }
+}
+
+.carte-texte {
+
+    padding-left: 20px;
+    position: relative;
+
+        & h4 {
+
+        font-size: 17px;
+        margin-bottom: 0px;
+        }
+
+        & p {
+
+            margin-top: 8px 
+        }
+       @include heart-like;  
+}
+
+.new {
+
+    position: relative;
+
+        &:before {
+
+        content: "Nouveau";
+        background-color: $green-tertiary; 
+        color: #008766; 
+        border-radius: 0.2em;
+        padding: 7px 14px 7px 14px; 
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        }
+}
+

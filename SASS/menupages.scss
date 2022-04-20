@@ -1,0 +1,228 @@
+/*La palette du Goût*/
+
+.restaurant-bg {
+
+    @include logo;
+
+        & i {
+
+        position: absolute; 
+        left: 30px; 
+        top: 22px;
+        cursor: pointer;
+        }
+
+        & a {
+
+            color: black; 
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 25px;
+
+            & :hover{
+
+                cursor: pointer;
+            }
+        }
+}        
+
+.image-bg{
+
+
+    width: 100%;
+    object-fit: cover;
+    height: 32em;
+}
+
+
+/*Menus*/
+
+.menu-background {
+
+    position: relative;
+    padding: 20px 30px 50px 30px; 
+    background-color: #f6f6f6;
+    margin: -70px 100px 0px 100px; 
+    border-radius: 2em 2em 0em 0em; 
+
+    @include break-tablet{
+
+    margin: -70px 0px 0px 0px ;
+    padding: 20px 14px 50px 14px;
+}
+}
+
+.menu-title h2 {
+
+    font-family: $font-1;
+    padding-left: 16px;
+
+}
+
+.menu-title  {
+
+    position: relative;
+
+    & h2 {
+
+        font-family: $font-1;
+        padding-left: 16px;
+    
+    }
+    @include heart-like;
+}
+
+
+
+.menu-list {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3em;
+
+    @include break-tablet{
+
+        grid-template-columns: 1fr;
+    }
+}
+
+/*Entrées*/
+
+.entrees-all {
+    
+    overflow: hidden; 
+    padding: 0 1rem;
+
+    & h3{
+
+        position: relative;
+
+
+        &:after {
+
+            content: ""; 
+            height: 4px ;
+            width: 50px ;
+            background-color: $green-tertiary;
+            position: absolute;
+            top: 26px; 
+            left: 0px; 
+
+        }
+    }
+}
+
+.menu-flex{
+
+    display: flex;
+    background-color: #fff;
+    border-radius: 1em; 
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 10%); 
+    width: 100%;
+    overflow: hidden;
+    margin: 16px 0px 16px 0px;
+    flex-wrap: wrap;
+    cursor: pointer;   
+    animation: appear 1.5s; 
+    animation-fill-mode: forwards;
+
+    &:hover{
+
+        cursor: pointer;
+    
+
+        & .menu-confirmation {
+    
+            margin-right: 0; 
+        }
+        .menu-icon{
+    
+            transform: rotate(0);
+        }
+    }   
+}
+
+.menu-txt {
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
+
+    & h4{
+
+        margin: 0px; 
+        padding: 15px 15px 8px 15px;
+        font-size: 17px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; 
+    }
+    p {
+
+        padding: 0px 15px 15px 15px;
+        margin: 0px;  
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+.menu-prix {
+
+    display: flex;
+    font-weight: bold;
+    padding-bottom: 14px ;
+    font-size: 16px;
+    padding-right: 10px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.menu-icon {
+
+    display: flex;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-radius: 1em;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+    
+        & i{
+
+            color: $green-tertiary;
+            font-size: 20px ;
+        }
+}
+.menu-confirmation {
+    
+    background-color: $green-tertiary;
+    width: 64px ;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    border-radius: 0em 1em 1em 0em;
+    margin-right: -65px ;  
+    transition-duration: 500ms;
+}
+
+/*Delay*/
+@for $i from 0 to 9 {
+    .delay-#{$i} {
+      animation-delay:  .1s * $i;
+    }
+}
+
+/*Bouton Commander*/
+
+.button-flex {
+
+    margin: 50px 0px 20px 0px ;
+    display: flex;
+    justify-content: center;
+
+    @include button;
+}
+

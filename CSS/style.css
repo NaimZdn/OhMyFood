@@ -1,0 +1,633 @@
+@charset "UTF-8";
+/*Button*/
+/*Animation Heart*/
+/*Header Logo*/
+/*Brekpoint*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+main {
+  font-family: "Roboto";
+}
+
+/*Logo*/
+.logo {
+  position: relative;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+.logo h1 {
+  font-family: "Shrikhand";
+  margin: 0px;
+  padding: 10px 0 10px 0;
+  text-align: center;
+}
+
+/*Footer*/
+.allfooter {
+  background-color: #353535;
+  width: 100%;
+  padding-bottom: 50px;
+}
+.allfooter h4 {
+  font-family: "Shrikhand";
+  margin: 0px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  padding: 20px 0px 25px 0px;
+}
+@media (max-width: 768px) {
+  .allfooter h4 {
+    text-align: start;
+    padding: 20px 0px 20px 30px;
+  }
+}
+@media (max-width: 768px) {
+  .allfooter {
+    padding-bottom: 25px;
+  }
+}
+
+.txtfooter {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 3em;
+  flex-wrap: wrap;
+  font-family: "Roboto";
+}
+.txtfooter a {
+  color: inherit;
+  text-decoration: none;
+}
+.txtfooter li {
+  color: white;
+}
+.txtfooter i {
+  padding-right: 10px;
+}
+@media (max-width: 768px) {
+  .txtfooter {
+    flex-direction: column;
+    gap: 0.5em;
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pad {
+    padding-right: 6px;
+  }
+}
+
+/*Button*/
+/*Animation Heart*/
+/*Header Logo*/
+/*Brekpoint*/
+/*Loader*/
+.loader {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.loader-2 {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  animation: loader 3s both;
+}
+
+.wrapper {
+  width: 200px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #9356DC;
+  left: 15%;
+  transform-origin: 50%;
+  animation: circle 0.5s alternate infinite ease;
+}
+.circle:nth-child(2) {
+  left: 35%;
+  background-color: #FF79DA;
+  animation-delay: 0.2s;
+}
+.circle:nth-child(3) {
+  left: auto;
+  background-color: #99E2D0;
+  right: 35%;
+  animation-delay: 0.3s;
+}
+
+/*Lieu*/
+.lieu {
+  display: flex;
+  font-family: "Roboto";
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 10px 0;
+  margin: 0px;
+  background-color: #f2f2f2;
+}
+.lieu h2 {
+  font-size: 19px;
+}
+.lieu i {
+  font-size: 20px;
+  padding-right: 20px;
+}
+
+/*Nav Bar */
+.explorer {
+  font-family: "Roboto";
+  text-align: center;
+  background-color: #fafafa;
+  padding: 20px;
+}
+.explorer h3 {
+  font-size: 25px;
+}
+.explorer p {
+  font-weight: 200;
+}
+.explorer button {
+  font-size: 18px;
+  padding: 13px 25px 13px 25px;
+  border-radius: 100px;
+  color: #fff;
+  font-weight: bold;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  border: none;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+  transition-duration: 0.25s;
+}
+.explorer button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.75);
+}
+
+/*Fonctionnement*/
+.fonction h3 {
+  padding-left: 100px;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+@media (max-width: 768px) {
+  .fonction h3 {
+    padding: 0px 30px 0px 30px;
+  }
+}
+
+.step {
+  display: flex;
+  gap: 40px;
+  padding: 0px 100px 0px 100px;
+  counter-reset: tuto;
+}
+.step li {
+  background-color: #f6f6f6;
+  padding: 25px 25px 25px 0px;
+  flex-grow: 1;
+  border-radius: 20px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+  list-style: none;
+}
+.step li:before {
+  content: "" counter(tuto);
+  counter-increment: tuto;
+  background-color: #9356DC;
+  color: white;
+  padding: 4px 9px 4px 9px;
+  border-radius: 100%;
+  position: relative;
+  left: -14px;
+}
+.step li:hover {
+  background-color: #f5edff;
+}
+.step li:hover .fa-solid {
+  color: #9356DC;
+}
+.step i {
+  color: #7e7e7e;
+  padding-right: 10px;
+}
+@media (max-width: 1024px) {
+  .step {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .step {
+    padding: 0px 30px 0px 30px;
+  }
+}
+
+.step_texte {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/*Listes des Restaurants*/
+/*Restaurants*/
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 0px 100px 50px 100px;
+}
+.restaurants h3 {
+  font-size: 25px;
+  padding-top: 25px;
+}
+@media (max-width: 768px) {
+  .restaurants {
+    padding: 0px 30px 50px 30px;
+  }
+}
+
+.full-cartes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+}
+.full-cartes a {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  .full-cartes {
+    grid-template-columns: repeat(1, 4fr);
+  }
+}
+
+.carte {
+  row-gap: 2em;
+  gap: 2em;
+  background-color: white;
+  border-radius: 1em;
+}
+.carte img {
+  height: 12em;
+  width: 100%;
+  border: 0px solid transparent;
+  border-radius: 1em 1em 0 0;
+  object-fit: cover;
+}
+
+.carte-texte {
+  padding-left: 20px;
+  position: relative;
+}
+.carte-texte h4 {
+  font-size: 17px;
+  margin-bottom: 0px;
+}
+.carte-texte p {
+  margin-top: 8px;
+}
+.carte-texte i {
+  font-size: 35px;
+  position: absolute;
+  right: 16px;
+  top: 0px;
+}
+.carte-texte .fa-solid {
+  opacity: 0;
+}
+.carte-texte .fa-solid:hover {
+  opacity: 1;
+  color: transparent;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: 200ms;
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.new {
+  position: relative;
+}
+.new:before {
+  content: "Nouveau";
+  background-color: #99E2D0;
+  color: #008766;
+  border-radius: 0.2em;
+  padding: 7px 14px 7px 14px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+/*La palette du Goût*/
+.restaurant-bg {
+  position: relative;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+.restaurant-bg h1 {
+  font-family: "Shrikhand";
+  margin: 0px;
+  padding: 10px 0 10px 0;
+  text-align: center;
+}
+.restaurant-bg i {
+  position: absolute;
+  left: 30px;
+  top: 22px;
+  cursor: pointer;
+}
+.restaurant-bg a {
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 25px;
+}
+.restaurant-bg a :hover {
+  cursor: pointer;
+}
+
+.image-bg {
+  width: 100%;
+  object-fit: cover;
+  height: 32em;
+}
+
+/*Menus*/
+.menu-background {
+  position: relative;
+  padding: 20px 30px 50px 30px;
+  background-color: #f6f6f6;
+  margin: -70px 100px 0px 100px;
+  border-radius: 2em 2em 0em 0em;
+}
+@media (max-width: 1024px) {
+  .menu-background {
+    margin: -70px 0px 0px 0px;
+    padding: 20px 14px 50px 14px;
+  }
+}
+
+.menu-title h2 {
+  font-family: "Shrikhand";
+  padding-left: 16px;
+}
+
+.menu-title {
+  position: relative;
+}
+.menu-title h2 {
+  font-family: "Shrikhand";
+  padding-left: 16px;
+}
+.menu-title i {
+  font-size: 35px;
+  position: absolute;
+  right: 16px;
+  top: 0px;
+}
+.menu-title .fa-solid {
+  opacity: 0;
+}
+.menu-title .fa-solid:hover {
+  opacity: 1;
+  color: transparent;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: 200ms;
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3em;
+}
+@media (max-width: 1024px) {
+  .menu-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Entrées*/
+.entrees-all {
+  overflow: hidden;
+  padding: 0 1rem;
+}
+.entrees-all h3 {
+  position: relative;
+}
+.entrees-all h3:after {
+  content: "";
+  height: 4px;
+  width: 50px;
+  background-color: #99E2D0;
+  position: absolute;
+  top: 26px;
+  left: 0px;
+}
+
+.menu-flex {
+  display: flex;
+  background-color: #fff;
+  border-radius: 1em;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  overflow: hidden;
+  margin: 16px 0px 16px 0px;
+  flex-wrap: wrap;
+  cursor: pointer;
+  animation: appear 1.5s;
+  animation-fill-mode: forwards;
+}
+.menu-flex:hover {
+  cursor: pointer;
+}
+.menu-flex:hover .menu-confirmation {
+  margin-right: 0;
+}
+.menu-flex:hover .menu-icon {
+  transform: rotate(0);
+}
+
+.menu-txt {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+}
+.menu-txt h4 {
+  margin: 0px;
+  padding: 15px 15px 8px 15px;
+  font-size: 17px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu-txt p {
+  padding: 0px 15px 15px 15px;
+  margin: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu-prix {
+  display: flex;
+  font-weight: bold;
+  padding-bottom: 14px;
+  font-size: 16px;
+  padding-right: 10px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.menu-icon {
+  display: flex;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 1em;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+.menu-icon i {
+  color: #99E2D0;
+  font-size: 20px;
+}
+
+.menu-confirmation {
+  background-color: #99E2D0;
+  width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0em 1em 1em 0em;
+  margin-right: -65px;
+  transition-duration: 500ms;
+}
+
+/*Delay*/
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}
+
+.delay-7 {
+  animation-delay: 0.7s;
+}
+
+.delay-8 {
+  animation-delay: 0.8s;
+}
+
+/*Bouton Commander*/
+.button-flex {
+  margin: 50px 0px 20px 0px;
+  display: flex;
+  justify-content: center;
+}
+.button-flex button {
+  font-size: 18px;
+  padding: 13px 25px 13px 25px;
+  border-radius: 100px;
+  color: #fff;
+  font-weight: bold;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  border: none;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+  transition-duration: 0.25s;
+}
+.button-flex button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.75);
+}
+
+/*Loader*/
+@keyframes loader {
+  to {
+    visibility: hidden;
+  }
+}
+/*Loader Circle */
+@keyframes circle {
+  0% {
+    top: 60px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0%;
+  }
+}
+/*Animation delay*/
+@keyframes appear {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/*Button*/
+/*Animation Heart*/
+/*Header Logo*/
+/*Brekpoint*/
+
+/*# sourceMappingURL=style.css.map */

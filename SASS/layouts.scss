@@ -1,0 +1,84 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+}
+
+main {
+    font-family: $font-2;
+}
+
+/*Logo*/
+.logo{
+
+    @include logo;
+}
+
+/*Footer*/
+.allfooter{
+    background-color: #353535;
+    width: 100%;
+    padding-bottom: 50px;
+
+    & h4{
+
+    font-family: $font-1; 
+    margin: 0px;
+    text-align: center;
+    font-size: 25px ;
+    color: white; 
+    padding: 20px 0px 25px 0px; 
+
+        @include break-mobile{
+            text-align:start; 
+            padding: 20px 0px 20px 30px; 
+        }
+    }
+    @include break-mobile{
+        padding-bottom: 25px;
+
+    }
+} 
+
+
+.txtfooter {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 3em;
+    flex-wrap: wrap;
+    font-family: $font-2;
+
+    & a {
+
+    color: inherit; 
+    text-decoration: none;
+    }   
+    & li {
+
+    color: white; 
+    }
+    & i {
+    padding-right: 10px; 
+    }
+
+    @include break-mobile{
+        flex-direction: column;
+        gap: 0.5em; 
+        padding-left: 30px 
+    }
+}
+
+.pad{
+
+    @include break-mobile{
+        padding-right: 6px 
+    }
+}
+
